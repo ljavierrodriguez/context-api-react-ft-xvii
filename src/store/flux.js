@@ -4,7 +4,6 @@ const getState = ({ getStore, getActions, setStore }) => {
             name: 'Unknown',
             lastname: 'Doe',
             users: null,
-            colors: [],
             selectedColor: "#ffffffff",
         },
         actions: {
@@ -20,9 +19,6 @@ const getState = ({ getStore, getActions, setStore }) => {
                     .then((data) => {
                         setStore({ users: data })
                     })
-            },
-            setColors: (colors = []) => {
-                setStore({ colors: colors });
             },
             setSelectedColor: color => {
                 setStore({ selectedColor: color });

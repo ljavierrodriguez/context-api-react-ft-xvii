@@ -9,8 +9,12 @@ import injectContext from './store/appContext';
 import About from './views/about';
 import Home from './views/home';
 import BackgroundApp from './components/BackgroundApp';
+import useGenerateColors from './hooks/useGenerateColors';
 
 const App = () => {
+
+    const [colors] = useGenerateColors(20);
+
     return (
         <>
             <InfoUser>
@@ -21,7 +25,7 @@ const App = () => {
                             <Route path="/about" element={<About />} />
                             <Route path="/" element={<Home />} />
                         </Routes>
-                        <OffcanvasUp />
+                        <OffcanvasUp colors={colors} />
                     </BackgroundApp>
                 </BrowserRouter>
             </InfoUser>

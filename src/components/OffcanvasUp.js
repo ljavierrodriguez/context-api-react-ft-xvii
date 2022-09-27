@@ -2,8 +2,8 @@ import React, { useContext, useEffect } from 'react';
 import useGenerateColors from '../hooks/useGenerateColors';
 import { AppContext } from '../store/appContext';
 
-const OffcanvasUp = () => {
-    const { store, actions } = useContext(AppContext);
+const OffcanvasUp = ({ colors }) => {
+    const { actions } = useContext(AppContext);
     
     return (
         <div className="offcanvas offcanvas-top" tabIndex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
@@ -21,8 +21,9 @@ const OffcanvasUp = () => {
                             #FFFFFFFF
                         </div>
                         {
-                            !!store.colors &&
-                            store.colors.map((color, index) => {
+                            !!colors &&
+                            colors.length > 0 &&
+                            colors.map((color, index) => {
                                 return (
                                     <div key={index} className="box m-1 shadow text-muted d-flex justify-content-center align-items-center"
                                         style={{ background: color }}

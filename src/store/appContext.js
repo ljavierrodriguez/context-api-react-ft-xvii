@@ -16,11 +16,8 @@ const injectContext = (PassedComponent) => {
             })
         }));
 
-        const [colors] = useGenerateColors(20);
-
         useEffect(() => {
             state.actions.getSelectedColor();
-            state.actions.setColors(colors);
             state.actions.getUsers("https://jsonplaceholder.typicode.com/users")
         }, [])
 
