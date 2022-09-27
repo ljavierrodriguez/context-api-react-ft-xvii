@@ -1,0 +1,9 @@
+#root {
+    height: 100vh;
+}
+
+.box {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+}
