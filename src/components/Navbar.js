@@ -18,7 +18,7 @@ const Navbar = () => {
                 <span className="nav-link">{user}</span>
             </li>
             <li className="nav-item py-2">
-                <button className="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Config</button>
+                <button className="btn btn-primary btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Config</button>
             </li>
         </ul>
     )

@@ -13,7 +13,7 @@ import useGenerateColors from './hooks/useGenerateColors';
 
 const App = () => {
 
-    const [colors] = useGenerateColors(20);
+    const [colors] = useGenerateColors(27);
 
     return (
         <>

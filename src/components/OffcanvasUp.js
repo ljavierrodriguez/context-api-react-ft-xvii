@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from 'react';
-import useGenerateColors from '../hooks/useGenerateColors';
 import { AppContext } from '../store/appContext';
 
 const OffcanvasUp = ({ colors }) => {
